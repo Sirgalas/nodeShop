@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "super",
+    "password": 1,
+    "database": "develop_db",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "super",
+    "password": 1,
+    "database": "test_db",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "super",
+    "password": 1,
+    "database": "prod_db",
+    "host": "localhost",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  }
+}
