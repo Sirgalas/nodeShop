@@ -1,7 +1,7 @@
 //let exports = module.exports = {}
 const models= require('../models');
 exports.index = (req, res)=> {
-    models.goods.findAll().then((goods)=>{
+    models.Goods.findAll().then((goods)=>{
 
         for (val in goods){
             console.log(val.category);
