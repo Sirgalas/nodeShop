@@ -1,17 +1,29 @@
-//https://www.youtube.com/watch?v=863BZw8Tg6w&list=PLfvnSu_yEgx6iDWzg3mXTBWPc81El4G5d&index=2
-
 let express =require('express');
 let app = express();
 let config = require('./config');
-const models  = require('./models');
-app.use(express.static('public'));
+const models = require("./models");
+const routes = require('./routers/router');
+const path 		= require('path');
 
+app.use('/', routes);
+
+
+app.use(express.static('public'));
+app.set('views', path.join(__dirname, '/views/layouts'));
 app.set('view engine','pug');
 
-app.listen(3015,function () {
-    console.log('start app js on 3015')
+
+//Sync Database
+models.sequelize.sync().then(function() {
+    console.log('Nice! Database looks fine')
+}).catch(function(err) {
+    console.log(err, "Something went wrong with the Database Update!")
+
+});
+app.listen(3015,err=>{
+    err ? console.log(error) : console.log('Server started')
 });
 
-app.get('/', function (req, res){
-    res.render('main');
-});
+
+
+

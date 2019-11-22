@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('category', {
+    return queryInterface.createTable('categories', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: {
-            tableName: 'category',
+            tableName: 'categories',
             key:'id'
           },
           onDelete: 'No action',
@@ -36,9 +36,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    }).then(()=>queryInterface.addIndex('category',['parent_id']));
+    }).then(()=>queryInterface.addIndex('categories',['parent_id']));
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('category');
+    return queryInterface.dropTable('categories');
   }
 };

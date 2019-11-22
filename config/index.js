@@ -3,7 +3,7 @@
 var init = function () {
 
 
-    return require('./config_some.json');
+    return require('./config.json');
 
 }
 
