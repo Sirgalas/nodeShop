@@ -1,9 +1,10 @@
 //let exports = module.exports = {}
 const models= require('../models');
-const Category= models.category;
+const Goods= require('../models').goods;
+const Category= require('../models').category;
 exports.index = (req, res)=> {
-    models.goods.findAll({include: [Category]}).then((goods)=>{
-        console.log(goods[0].Category);
+    Goods.findAll({include: [Category]}).then((goods)=>{
+        console.log(goods[0].category.name);
         res.render('home',{
             goods: goods
         });
