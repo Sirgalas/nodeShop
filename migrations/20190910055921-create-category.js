@@ -17,6 +17,9 @@ module.exports = {
       image: {
         type: Sequelize.STRING
       },
+      slug: {
+        type: Sequelize.STRING
+      },
       parent_id: {
         type: Sequelize.INTEGER,
         references: {

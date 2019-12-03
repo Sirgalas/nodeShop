@@ -1,120 +1,106 @@
-html
-    head
-        meta(charset='utf-8')
-        meta(http-equiv="X-UA-Compatible" content="IE=edge")
-        meta(name="viewport" content="width=device-width, initial-scale=1")
-        link(href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet")
-        link(type="text/css" rel="stylesheet" href="css/bootstrap.min.css")
-        link(type="text/css" rel="stylesheet" href="css/slick.css")
-        link(type="text/css" rel="stylesheet" href="css/slick-theme.css")
-        link(type="text/css" rel="stylesheet" href="css/nouislider.min.css")
-        link(rel="stylesheet" href="css/font-awesome.min.css")
-        link(type="text/css" rel="stylesheet" href="css/style.css")
-        title node shop
-    body
-        header
-            div(id="top-header")
-                div(class="container")
-                    ul(class="header-links pull-left")
-                        li
-                            a(href="#") '021-95-51-84'
-                                i(class="fa fa-phone")
-                        li
-                            a(href="#") email@email.com
-                                i(class="fa fa-envelope-o")
-                        li
-                            a(href="#") 1734 Stonecoal Road
-                                i(class="fa fa-map-marker")
-                    ul(class="header-links pull-right")
-                        li
-                            a(href="#") 'USD'
-                                i(class="fa fa-dollar")
-                        li
-                            a(href="#") 'My Account'
-                                i(class="fa fa-user-o")
-                    //TOP HEADER
-                     //MAIN HEADER
-            div(id="header")
-                div(class="container")
-                    div(class="row")
-                        div(class="col-md-3")
-                            div(class="header-logo")
-                                a(href="/" class="logo")
-                                    img(src="./img/logo.png" alt="")
-                            div(class="col-md-6")
-                                div(class="header-search")
-                                    form
-                                        select(class="input-select")
-                                            option(value="0") All
-                                            option(value="1") Category_1
-                                            option(value="2") Category_2
-                                        input(class="input" placeholder="Search here")
-                                        button(class="search-btn") Search
-                            div(class="col-md-3 clearfix")
-                                div(class="header-ctn")
-                                    div
-                                        a(href="#")
-                                            i(class="fa fa-heart-o")
-                                            span Your Wishlist
-                                                div(class="qty") 2
-                                    div(class="dropdown")
-                                        a(class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true")
-                                            i(class="fa fa-shopping-cart")
-                                                span Your Cart
-                                                div(class="qty") 3
-                                        div(class="cart-dropdown")
-                                            div(class="cart-list")
-                                                div(class="product-widget")
-                                                    div(class="product-img")
-                                                        img(src="./img/product01.png" alt="")
-                                                    div(class="product-body")
-                                                        h3(class="product-name")
-                                                            a(href="#") product name goes here
-                                                        h4(class="product-price") $980.00
-                                                        button(class="delete")
-                                                            i(class="fa fa-close")
-                                                div(class="product-widget")
-                                                    div(class="product-img")
-                                                        img(src="./img/product02.png" alt="")
-                                                    div(class="product-body")
-                                                        h3(class="product-name")
-                                                            a(href="#") product name goes here
-                                                        h4(class="product-price") $980.00
-                                                    button(class="delete")
-                                                        i(class="fa fa-close")
-                                            div(class="cart-summary")
-                                                div(class="cart-summary")
-                                                    small 3 Item(s) selected
-                                                    h5 SUBTOTAL: $2940.00
-                                                div(class="cart-btns")
-                                                    a(href="#") View Cart
-                                                    a(href="#") Checkout
-                                                        i(class="fa fa-arrow-circle-right")
-                                            //Cart
-                                            // Menu Toogle
-                                    div(class="menu-toggle")
-                                        a(href="#")
-                                            i(class="fa fa-bars")
-                                                span Menu
-                                            //Menu Toogle
-                                        //ACCOUNT
-        //HEADER
-        //NAVIGATION
-        nav(id="navigation")
-            div(id="responsive-nav")
-                ul(class="main-nav nav navbar-nav")
-                    li(class="active")
-                        a(href="/") Home
-                    li
-                        a(href="#") Hot Deals
-                    li
-                        a(href="#") Categories
-                    li
-                        a(href="#") Laptops
-                    li
-                        a(href="#") Smartphones
-                    li
-                        a(href="#") Cameras
-                    li
-                        a(href="#") Accessories
-        //NAVIGATION
+header
+    div(id="top-header")
+        div(class="container")
+            ul(class="header-links pull-left")
+                li
+                    a(href="#") '021-95-51-84'
+                        i(class="fa fa-phone")
+                li
+                    a(href="#") email@email.com
+                        i(class="fa fa-envelope-o")
+                li
+                    a(href="#") 1734 Stonecoal Road
+                        i(class="fa fa-map-marker")
+            ul(class="header-links pull-right")
+                li
+                    a(href="#") 'USD'
+                        i(class="fa fa-dollar")
+                li
+                    a(href="#") 'My Account'
+                        i(class="fa fa-user-o")
+            //TOP HEADER
+             //MAIN HEADER
+    div(id="header")
+        div(class="container")
+            div(class="row")
+                div(class="col-md-3")
+                    div(class="header-logo")
+                        a(href="/" class="logo")
+                            img(src="./img/logo.png" alt="")
+                    div(class="col-md-6")
+                        div(class="header-search")
+                            form
+                                select(class="input-select")
+                                    option(value="0") All
+                                    option(value="1") Category_1
+                                    option(value="2") Category_2
+                                input(class="input" placeholder="Search here")
+                                button(class="search-btn") Search
+                    div(class="col-md-3 clearfix")
+                        div(class="header-ctn")
+                            div
+                                a(href="#")
+                                    i(class="fa fa-heart-o")
+                                    span Your Wishlist
+                                        div(class="qty") 2
+                            div(class="dropdown")
+                                a(class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true")
+                                    i(class="fa fa-shopping-cart")
+                                        span Your Cart
+                                        div(class="qty") 3
+                                div(class="cart-dropdown")
+                                    div(class="cart-list")
+                                        div(class="product-widget")
+                                            div(class="product-img")
+                                                img(src="./img/product01.png" alt="")
+                                            div(class="product-body")
+                                                h3(class="product-name")
+                                                    a(href="#") product name goes here
+                                                h4(class="product-price") $980.00
+                                                button(class="delete")
+                                                    i(class="fa fa-close")
+                                        div(class="product-widget")
+                                            div(class="product-img")
+                                                img(src="./img/product02.png" alt="")
+                                            div(class="product-body")
+                                                h3(class="product-name")
+                                                    a(href="#") product name goes here
+                                                h4(class="product-price") $980.00
+                                            button(class="delete")
+                                                i(class="fa fa-close")
+                                    div(class="cart-summary")
+                                        div(class="cart-summary")
+                                            small 3 Item(s) selected
+                                            h5 SUBTOTAL: $2940.00
+                                        div(class="cart-btns")
+                                            a(href="#") View Cart
+                                            a(href="#") Checkout
+                                                i(class="fa fa-arrow-circle-right")
+                                    //Cart
+                                    // Menu Toogle
+                            div(class="menu-toggle")
+                                a(href="#")
+                                    i(class="fa fa-bars")
+                                        span Menu
+                                    //Menu Toogle
+                                //ACCOUNT
+//HEADER
+//NAVIGATION
+nav(id="navigation")
+    div(id="responsive-nav")
+        ul(class="main-nav nav navbar-nav")
+            li(class="active")
+                a(href="/") Home
+            li
+                a(href="#") Hot Deals
+            li
+                a(href="#") Categories
+            li
+                a(href="#") Laptops
+            li
+                a(href="#") Smartphones
+            li
+                a(href="#") Cameras
+            li
+                a(href="#") Accessories
+//NAVIGATION

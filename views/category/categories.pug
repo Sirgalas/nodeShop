@@ -1,0 +1,93 @@
+extends ../layouts/main
+block title
+	title Category Page
+block content
+	div(class="section")
+		div(class="container")
+			div(class="row")
+				div(id="aside" class="col-md-3")
+					div(class="aside")
+						h3(class="aside-title") Categories
+							div(class="checkbox-filter")
+								each category,index in categories
+									div(class="input-checkbox")
+										input(type="checkbox" id="category-"+index)
+										label(for="category-"+index)
+											span #{category.name}
+											small (120)
+					div(class="aside")
+						h3(class="aside-title") Price
+						div(class="price-filter")
+							div(id="price-slider")
+								div(class="input-number price-min")
+									input(id="price-min" type="number")
+									span(class="qty-up") +
+									span(class="qty-down") -
+								div(class="input-number price-max")
+									input(id="price-max" type="number")
+									span(class="qty-up") +
+									span(class="qty-down") -
+				div(id="store" class="col-md-9")
+					div(class="store-filter clearfix")
+						div(class="store-sort")
+							label Sort By:
+								select(class="input-select")
+									option(value="0") Popular
+									option(value="1") Position
+							label Show:
+								select(class="input-select")
+									option(value="0") 20
+									option(value="1") 50
+						ul(class="store-grid")
+							li(class="active")
+								i(class="fa fa-th")
+							li
+								a(href="#")
+									i(class="fa fa-th-list")
+					div(class="row")
+						each category,index in categories
+							each val,index in category.goods
+								div(class="col-md-4 col-xs-6")
+									div(class="product")
+										div(class="product-img")
+											img(src="#{val.image}" alt="")
+											//div(class="product-label")
+												span(class="sale") -30%
+												span(class="new")NEW
+										div(class="product-body")
+											p(class="product-category") Category
+												h3(class="product-name")
+													p(class="product-category") #{category.name}
+											h4(class="product-price") 980.00
+											div(class="product-rating")
+												i(class="fa fa-star")
+												i(class="fa fa-star")
+												i(class="fa fa-star")
+												i(class="fa fa-star")
+												i(class="fa fa-star")
+											div(class="product-btns")
+												button(class="add-to-wishlist")
+													i(class="fa fa-heart-o")
+														span(class="tooltipp") add to wishlist
+												button(class="add-to-compare")
+													i(class="fa fa-exchange")
+														span(class="tooltipp") add to compare
+												button(class="quick-view")
+													i(class="fa fa-eye")
+														span(class="tooltipp") quick view
+										div(class="add-to-cart")
+											button(class="add-to-cart-btn")
+												i(class="fa fa-shopping-cart") add to cart
+					div(class="store-filter clearfix")
+						span(class="store-qty") Showing 20-100 products
+						ul(class="store-pagination")
+							li(class="active") 1
+							li
+								a(href="#") 2
+							li
+								a(href="#") 3
+							li
+								a(href="#") 4
+							li
+								a(href="#")
+								i(class="fa fa-angle-right")

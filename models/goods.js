@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       through: 'goods_to_category',
       foreignKey: 'goods_id',
       otherKey: 'category_id',
-     // as: 'category'
+      //as: 'category'
     });
   };
   return goods;

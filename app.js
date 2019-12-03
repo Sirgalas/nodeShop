@@ -3,15 +3,27 @@ let app = express();
 let config = require('./config');
 const models = require("./models");
 const routes = require('./routers/router');
-const path 		= require('path');
+const path = require('path');
+const graphqlHTTP = require('express-graphql');
+const schema = require('../schema/schema');
+
+
+const graph = express();
+
+graph.use(cors());
+
+graph.use('/graphql',graphqlHTTP({
+    schema,
+    graphiql:true
+}));
 
 app.use('/', routes);
 
 
-app.use(express.static('public'));
-app.set('views', path.join(__dirname, '/views/layouts'));
-app.set('view engine','pug');
 
+app.use(express.static('public'));
+app.set('views', path.join(__dirname, '/views'));
+app.set('view engine','pug');
 
 //Sync Database
 models.sequelize.sync().then(function() {
